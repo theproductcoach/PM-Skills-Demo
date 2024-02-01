@@ -1,10 +1,10 @@
-# My A/B Testing Case Study: Button Color Experiment
+# A/B Testing Case Study: Button Colour Experiment
 
 ## Introduction
 
-In this case study, I will delve into a straightforward A/B testing experiment that I conducted to identify the ideal color for a website button. In this experiment, I presented users with two different button colors, blue and green, each having an equal 50% chance of appearing. I meticulously tracked which button users clicked on to evaluate the influence of button color on user engagement and interaction.
+In this case study, I will delve into a straightforward A/B testing experiment to compare two colours for a website button. In the experiment, I present users with two different button colors, blue and green, each having an equal 50% chance of appearing. I then tracked which button users clicked on to evaluate the influence of button colour on user engagement and interaction.
 
-This case study mirrors real-life testing scenarios commonly encountered in workflows. For instance, it simulates situations where one might want to assess whether the color or placement of an 'add to cart' button impacts conversion rates.
+This simplified case study mirrors real-life testing scenarios commonly encountered in workflows. For instance, it simulates situations where one might want to assess whether the colour or placement of an 'add to cart' button impacts conversion rates.
 
 ## Experiment Setup
 
@@ -15,33 +15,35 @@ This case study mirrors real-life testing scenarios commonly encountered in work
 
 ### Hypothesis
 
-My hypothesis was that the choice of button color would have a discernible impact on user interaction. I anticipated that one color would surpass the other in terms of click-through rate (CTR).
+The hypothesis is that the choice of button colour would have a statistically significant impact on user interaction. I anticipated that one colour would surpass the other in terms of click-through rate (CTR).
 
 ### Data Collection
 
-I implemented a robust tracking mechanism to record the button color selected by users during their visits to the website. All collected data was meticulously stored for subsequent analysis.
+I implemented a simple tracking mechanism to record the button colour selected by users during their visits to the website. All collected data can be stored for subsequent analysis. For the purposes of this experiment I haven't created a database and back end to natively store the results.
 
 ## Results
 
-After accumulating data from a substantial number of users, I embarked on an in-depth analysis to draw meaningful conclusions.
-
-### Click-Through Rate (CTR)
-
-- **Version A (Blue Button)** CTR: XX%
-- **Version B (Green Button)** CTR: XX%
-
-The analysis unequivocally demonstrated that the [mention which color] button garnered a notably higher click-through rate, signifying its superior effectiveness in stimulating user interaction.
+See [Results Document](Results.md)
 
 ## Conclusion
 
-Based on the outcomes of the A/B test, I confidently concluded that the [mention which color] button stands as the superior choice for encouraging user interaction on our website. This uncomplicated A/B test has provided invaluable insights into user behavior and will significantly influence our future design decisions.
+Based on the statistical analysis:
+
+- The p-value obtained (p < 0.05) is statistically significant at the 0.05 level.
+- We reject the null hypothesis (H0) in favor of the alternative hypothesis (H1).
+- There is strong evidence to suggest that the green button (Version B) has a significantly higher CTR compared to the blue button (Version A).
+
+## Recommendation
+
+- The results of this A/B test indicate that using the green button is likely to lead to a higher click-through rate.
+- Consider implementing the green button as the primary call-to-action button on the website.
+
+## Limitations
+
+- The results are based on a specific duration and user base and may not be representative of long-term performance.
+- Other factors not considered in this test (e.g., button placement, text, website content) could impact CTR.
+- There is statistical significance, however it should be monitored going forward to ensure that we have not encountered an unlikely Type-1 error.
 
 ## Next Steps
 
-My A/B testing journey doesn't conclude here. I have the opportunity to further refine my experiments and explore additional variables to enhance user engagement. Future steps may involve testing different button sizes, experimenting with various text labels, or assessing alternative button placements to fine-tune our website's design and maximize our objectives.
 
-## Feedback
-
-I wholeheartedly welcome any feedback or suggestions on this case study. If you have questions or if you'd like to collaborate on similar experiments, please do not hesitate to reach out.
-
-I appreciate your time and interest in reading my A/B testing case study!
