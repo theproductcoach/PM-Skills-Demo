@@ -31,13 +31,13 @@
 - Blue Button CTR: 5.0%
 - Green Button CTR: 6.5%
 
-### Statistical Analysis
+## Statistical Analysis
 
 - Significance Level (α): 0.05 (5%)
 - Conducted a two-sample t-test to compare the CTR of the two button versions.
-- Calculated the p-value (p-value: 0.0002 (approximately))
+- Calculated the p-value (p-value: 0.05)
 
-## Two-Proportion Z-Test Calculations
+### Two-Proportion Z-Test Calculations
 
 The two-proportion Z-test is utilized to determine if there is a statistically significant difference between two proportions, such as conversion rates in an A/B test.
 
