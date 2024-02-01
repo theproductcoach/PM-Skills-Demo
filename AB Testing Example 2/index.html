@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... other head elements ... -->
+    <title>A/B Test with Graph</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure this points to your actual CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js for the graph -->
+</head>
+<body>
+    <div id="buttonsWrapper"> <!-- This div will contain both buttons side by side -->
+        <div class="button-container">
+            <button id="buttonBlue">Blue Button</button>
+            <div id="counterBlue">Clicks: 0</div>
+        </div>
+        <div class="button-container">
+            <button id="buttonGreen">Green Button</button>
+            <div id="counterGreen">Clicks: 0</div>
+        </div>
+    </div>
+    <canvas id="clickChart"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
