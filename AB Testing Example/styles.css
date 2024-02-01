@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#testButton {
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+#testButton.blue {
+    background-color: blue;
+    color: white;
+}
+
+#testButton.green {
+    background-color: green;
+    color: white;
+}
+
+#testButton:hover {
+    opacity: 0.9;
+}
+
+#testButton:active:not(.grey) {
+    background-color: grey;
+    color: black;
+    /* Optional: Adjusting the padding to give a pressed effect */
+    padding: 14px 29px;
+    border: 1px solid #ccc;
+}
+
+#testButton.grey {
+    background-color: grey;
+    color: black;
+    cursor: default; /* Change cursor to default when button is grey */
+    padding: 15px 30px; /* Reset padding to normal */
+    border: none; /* Remove border */
+}
