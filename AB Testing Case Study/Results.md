@@ -69,7 +69,6 @@ The two-proportion Z-test is utilized to determine if there is a statistically s
 2. **Interpretation:**
    - A small p-value (typically ≤ 0.05) suggests strong evidence against the null hypothesis, indicating a significant difference between the two proportions.
 
-
 ### Z-Score Calculation for This A/B Testing Example
 
 In this example, we conducted an A/B test with the following results:
@@ -106,7 +105,6 @@ We'll calculate the Z-score to determine the statistical significance of the dif
 - A Z-score of -1.96 suggests that the observed difference in conversion rates is 1.96 standard deviations away from the null hypothesis mean of zero.
 - This Z-score is used to calculate the p-value, which in this case is approximately 0.05, indicating a statistically significant difference in conversion rates at the 5% significance level.
 
-
 ### Conclusion
 
 Based on the statistical analysis:
@@ -119,4 +117,3 @@ Based on the statistical analysis:
 
 - The results of this A/B test indicate that using the green button is likely to lead to a higher click-through rate.
 - Consider implementing the green button as the primary call-to-action button on the website.
-

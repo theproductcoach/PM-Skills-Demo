@@ -45,5 +45,3 @@ Based on the statistical analysis:
 - There is statistical significance, however it should be monitored going forward to ensure that we have not encountered an unlikely Type-1 error.
 
 ## Next Steps
-
-
