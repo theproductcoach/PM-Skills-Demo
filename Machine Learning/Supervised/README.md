@@ -10,11 +10,16 @@ The data that is being used is contained in the 'music.csv' file, this is a very
 
 ## Project Steps
 
-1. Import the Data
-2. Clean the Data
-3. Split the data into training/test sets
-4. Select an algorithm and build a model
-5. Train the model
-6. Make predictions with the model
-7. Evaluate Algorithm and Improve Accuracy
+1. Import the Data  
+Grab the csv or equivalent you will be using.  
+2. Clean the Data  
+Plenty of things to consider here: spaces, special characters, empty rows, missing fields etc.  
+3. Split the data into training/test sets  
+Generally for this you should be using 70-80% of the data for training and the remainder ofr testing  
+4. Select an algorithm and build a model  
+In this case we're using a decision tree classifier  
+5. Train the model  
+
+6. Make predictions with the model  
+7. Evaluate Algorithm and Improve Accuracy  
 
