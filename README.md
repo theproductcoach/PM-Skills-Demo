@@ -21,4 +21,3 @@ Learn about my experience in designing and building APIs that facilitate data ex
 Feel free to delve into each area to gain insights into my approach, problem-solving skills, and commitment to delivering high-quality solutions.
 
 Thank you for visiting, and I hope you find my work inspiring and informative.
-
