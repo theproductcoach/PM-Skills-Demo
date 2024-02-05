@@ -2,15 +2,16 @@
 
 ## Introduction
 
-This is an example to show how to implement a simple unsupervised ML implementation using python. The model developed will learn and predict the kinds of music people will like, then creating and utilising 'recommendation algorithm'. During my time working as a Product Manager in numerous companies there has been a general lack of infrastructure to implement and support these types of ML solutions. This has led me to instead create this example to demonstrate my understanding and application of the concept.
+This is an example to show how to implement a supervised ML implementation using python. During my time working as a Product Manager in numerous companies there has been a general lack of infrastructure to implement and support these types of ML solutions. This has led me to instead create this example to demonstrate my understanding and application of the concept.
 
 ## Data
 
-The data that is being used is contained in the 'music.csv' file, this is a very simple table with 3 columns: age, gender, and genre. This is the data that will be used to create our solution and is reprensentative of known preferences of our customers on an ecommerce website selling music.
+The data that is being used is contained in the 'delaney-solubility-with-descriptors.csv' file, this is a table with 5 columns. The actual content of the data isn't extremely important, but for context it is from [here](https://www.kaggle.com/datasets/prashanthbairu/delaney-solubility-with-descriptors/) and the original paper this was used in is [here](https://www.moreisdifferent.com/assets/DIY_drug_discovery/Delaney_paper.pdf):
 
-## Cell 1  
+>This paper describes a simple method for estimating the aqueous solubility (ESOL - Estimated SOLubility)
+>of a compound directly from its structure. The model was derived from a set of 2874 measured solubilities
+>using linear regression against nine molecular properties.
 
-Here is a description of what is happening in Cell 1:
 
 ### Import the Data
 
@@ -22,32 +23,20 @@ Plenty of things to consider here: spaces, special characters, empty rows, missi
 
 ### Split the data into training/test sets
 
-Generally for this you should be using 70-80% of the data for training and the remainder for testing, to do this I used train_test_split from sklearn.
+Generally for this you should be using 70-80% of the data for training and the remainder for testing, to do this I used train_test_split from sklearn.  
 
-### Select an algorithm and build a model
+## Select an algorithm and build models
 
-In this case we're using a decision tree classifier
+In this case we use Linear Regression and Random Forests
 
-### Train the model
+## Train the model
 
 We simply feed the training values into the model through model.fit and that should be sufficient, the accuracy of the model will depend on the testing size.
 
-### Make predictions with the model
+## Evaluate Model Performance
 
-I used the test values to generate predictions and then scored those predictions using accuracy_score.
+In this case we show the correlation between Mean Squared Error and R2 for the training and testing sets for both models. We also generated a comparison between the two models' performance.
 
-### Evaluate Algorithm and Improve Accuracy
+## Visualisations
 
-In this case the predictions were between 0.5 and 1.0 for accuracy, depending on the dataset used to train, however on re-reunning the predictions you can see that it trends towards higher accuracy.
-
-## Cell 2
-
-In Cell 2 we want to export the model to save and use for later without having to re-write all the code. So we have imported joblib, and saved the model as 'Music-Recommender.joblib' using joblib.dump.
-
-## Cell 3
-
-In Cell 3 we want to import the model to load and use. So we have imported joblib, and loaded the model using joblib.load. We can then easily pass predictions to the model and show that it's still working as intended.
-
-## Cell 4
-
-In Cell 4 we want to show a visualised breakdown of what the model is doing through it's decision tree. In this case we are importing the 'tree' from sklean and then expoorting the model as a .dot file. You can see an image representation of the tree [here](./Decision%20tree%20image.jpg). You can also view the .dot graph using VSCode extensions such as [this](https://marketplace.visualstudio.com/items?itemName=tintinweb.graphviz-interactive-preview) one.
+Finally, we generated two visualisations, one for the Linear Regression, with a trendline added, and one for a single tree in the Random Forest.
