@@ -1,16 +1,12 @@
-# Supervised ML Implementation Example
+# Unsupervised ML Implementation Example
 
 ## Introduction
 
-This is an example to show how to implement a supervised ML implementation using python. During my time working as a Product Manager in numerous companies there has been a general lack of infrastructure to implement and support these types of ML solutions. This has led me to instead create this example to demonstrate my understanding and application of the concept.
+This is an example to show how to implement an unsupervised ML implementation using python. During my time working as a Product Manager in numerous companies there has been a general lack of infrastructure to implement and support these types of ML solutions. This has led me to instead create this example to demonstrate my understanding and application of the concept.
 
 ## Data
 
-The data that is being used is contained in the 'delaney-solubility-with-descriptors.csv' file, this is a table with 5 columns. The actual content of the data isn't extremely important, but for context it is from [here](https://www.kaggle.com/datasets/prashanthbairu/delaney-solubility-with-descriptors/) and the original paper this was used in is [here](https://www.moreisdifferent.com/assets/DIY_drug_discovery/Delaney_paper.pdf):
-
->This paper describes a simple method for estimating the aqueous solubility (ESOL - Estimated SOLubility)
->of a compound directly from its structure. The model was derived from a set of 2874 measured solubilities
->using linear regression against nine molecular properties.
+The data that is being used is contained in the 'delaney-solubility-with-descriptors.csv' file, this is a table with 5 columns. The actual content of the data isn't extremely important, but for context it is from and the original paper this was used in is 
 
 ### Import the Data
 
