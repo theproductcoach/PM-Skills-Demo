@@ -6,7 +6,7 @@ This is an example to show how to implement an unsupervised ML implementation us
 
 ## Data
 
-The data that is being used is contained in the 'delaney-solubility-with-descriptors.csv' file, this is a table with 5 columns. The actual content of the data isn't extremely important, but for context it is from and the original paper this was used in is 
+The data that is being used is contained in the 'delaney-solubility-with-descriptors.csv' file, this is a table with 5 columns. The actual content of the data isn't extremely important, but for context it is from and the original paper this was used in is here.
 
 ### Import the Data
 
