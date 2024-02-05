@@ -6,7 +6,7 @@ Welcome to my GitHub repository, where I showcase my project portfolio highlight
 
 Explore projects where I've successfully executed A/B testing strategies to optimize user experiences, increase engagement, and drive conversions. Learn about the methodologies, hypotheses, and results that demonstrate my ability to make data-driven decisions.
 
-## Machine Learning Implementation
+## Machine Learning Implementations (Supervised and Unsupervised)
 
 Discover how I've leveraged machine-learning techniques to solve real-world problems. Dive into projects that demonstrate my understanding of ML algorithms, data preprocessing, model training, and evaluation metrics, all aimed at delivering tangible business value.
 
