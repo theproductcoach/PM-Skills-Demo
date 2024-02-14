@@ -2,7 +2,7 @@
 # by using ReLU functions that have a 0 one one side and an x=x type output on the other.
 # "Rectified Linear Activation Function" sounds complex but essentiallty is just the "np.maximum(0, inputs)" part
 
-import numpy as n
+import numpy as np
 
 np.random.seed(0)
 
