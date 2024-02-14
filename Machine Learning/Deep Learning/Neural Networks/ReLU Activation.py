@@ -1,13 +1,14 @@
-import numpy as np
+# What are activation functions and why do we use them? Essentially to be able to fit our data better, 
+# by using ReLU functions that have a 0 one one side and an x=x type output on the other.
+# "Rectified Linear Activation Function" sounds complex but essentiallty is just the "np.maximum(0, inputs)" part
 
+import numpy as n
 
 np.random.seed(0)
 
 X =  [[1, 2, 3, 2.5], # Inputs are usually called 'X'
       [2.0, 5.0, -1.0, 2.0],
-      [-1.5, 2.7, 3.3, def -0.8]]
-
-
+      [-1.5, 2.7, 3.3, -0.8]]
 
 # Example dataset (spiral data)
 def spiral_data(points, classes):
@@ -34,13 +35,12 @@ class Activation_ReLU:
     def forward(self, inputs):
         self.output = np.maximum(0, inputs)
 
-layer1 = Layer_Dense(4, 5)
+layer1 = Layer_Dense(2, 5)
+activation1 = Activation_ReLU()
+
 layer1.forward(X)
 
+# print(layer1.output) #Still has lots of negative values
 
-import matplotlib.pyplot as plt
-
-print("here")
-
-plt.scatter(X[:,0], X[:1])
-plt.show()
+activation1.forward(layer1.output) # Removing the negatives using our activation function
+print(activation1.output)
