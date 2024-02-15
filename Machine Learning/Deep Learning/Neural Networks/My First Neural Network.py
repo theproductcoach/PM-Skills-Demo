@@ -1,4 +1,3 @@
-
 # Inputs from the last layer
 inputs = [1, 2, 3, 2.5] 
 
@@ -7,7 +6,6 @@ weights = [[0.2, 0.8 ,-0.5, 1],
            [-0.26, -0.27, 0.17, 0.87]]
 
 biases = [2, 3, 0.5]
-
 
 # Calculate the output of the neuron
 layer_outputs = [] # Output of the current layer
@@ -19,7 +17,6 @@ for neuron_weights, neuron_bias in zip(weights, biases):
     layer_outputs.append(neuron_output)
 
 print(layer_outputs)
-
 
 # Learning dot products
 import numpy as np
@@ -36,9 +33,7 @@ output = np.dot(weights, inputs) + bias
 
 print(output)
 
-
 # Let's Batch Inputs
-
 import numpy as np
 
 inputs = [[1, 2, 3, 2.5],
@@ -56,7 +51,6 @@ output = np.dot(inputs, np.array(weights).T) + biases # Adding transpose to make
 print(output)
 
 # Addinng another layer
-
 import numpy as np
 
 inputs = [[1, 2, 3, 2.5],
@@ -83,7 +77,6 @@ layer2_outputs = np.dot(layer1_outputs, np.array(weights2).T) + biases2 # Adding
 print(layer2_outputs)
 
 # Let's start using Objects
-
 import numpy as np
 
 np.random.seed(0)
@@ -114,7 +107,6 @@ layer2.forward(layer1.output) # Sending layer1 output data through layer 2
 print(layer2.output)
 
 # Let's add activation functions!
-
 import numpy as np
 
 np.random.seed(0)
@@ -136,6 +128,8 @@ for i in inputs:
         output.append(i)
     elif i <= 0:
         output.append(0)
+
 # Another option to do this
 #   output.append(max(0, i))
+        
 print(output)
