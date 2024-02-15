@@ -50,3 +50,38 @@ print(sum(norm_values)) # 0.9999999999999999
 # So overall what we're doing:
 # Input --> Exponentiate --> Normalise --> Output
 # In other words Input --> SoftMax --> Output
+
+# Let's conver the layer_outputs to a batch to work with more realistic data
+
+layer_outputs = [[4.8, 1.21, 2.385],
+                 [8.9, -1.81, 0.2],
+                 [1.42, 1.051, 0.026]]
+
+exp_values = np.exp(layer_outputs)
+
+print(exp_values) # Can see that it's done all of the values
+# [[1.21510418e+02 3.35348465e+00 1.08590627e+01]
+# [7.33197354e+03 1.63654137e-01 1.22140276e+00]
+# [4.13712044e+00 2.86051020e+00 1.02634095e+00]]
+
+# print(np.sum(layer_outputs)) # Just adds everything (18.182000000000002), we want 3 values
+
+# print(np.sum(layer_outputs, axis=0)) # Axis 0 sums columns ([15.12   0.451  2.611]) but we want rows
+
+# print(np.sum(layer_outputs, axis=1)) # Axis 0 does the rows ([8.395 7.29  2.497]) But we still need to shape this so that it does the order of operations and matrix multiply properly
+
+print(np.sum(layer_outputs, axis=1, keepdims=True)) # This gives us the sums in an array of arrays (list of lists):
+# [[8.395]
+#  [7.29 ]
+#  [2.497]]
+
+norm_values = exp_values / np.sum(exp_values, axis=1, keepdims=True) # Now this should work.
+
+print(norm_values) # Here's our normalised Values
+# [[8.95282664e-01 2.47083068e-02 8.00090293e-02]
+#  [9.99811129e-01 2.23163963e-05 1.66554348e-04]
+#  [5.15595101e-01 3.56495554e-01 1.27909345e-01]]
+
+# Now the actual SoftMax part is basically taking the largest value in the set and subtracting that form everything.
+# Why? So we can limit memory problems with large number exponentiation, if it gets too big too quickly (which it tends to do) it'll blow things up.
+
