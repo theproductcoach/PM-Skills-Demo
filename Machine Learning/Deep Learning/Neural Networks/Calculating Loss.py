@@ -1,38 +1,30 @@
-import numpy as np
-import nnfs # Make sure you install this in the virtual environment
-from nnfs.datasets import spiral_data # Grabbing the nnfs data
+import math
 
-nnfs.init()
+# We're using a process called 'categorical cross entropy' and 'one hot encoding'
 
-class Layer_Dense:
-    def __init__(self, n_inputs, n_neurons):
-        self.weights = 0.10 * np.random.randn(n_inputs, n_neurons) 
-        self.biases = np.zeros((1, n_neurons))
-    def forward(self, inputs): 
-        self.output = np.dot(inputs, self.weights) + self.biases
+# Remember that the softmax output is the confidence in that output being correct (from 0-1) and we're calculating how 'wrong' that is
 
-class Activation_ReLU:
-    def forward(self, inputs):
-        self.output = np.maximum(0, inputs)
+softmax_output = [0.7, 0.1, 0.2] # Example output from softmax activation function
+target_output = [1, 0 ,0 ]
 
-class Activation_Softmax:
-    def forward(self, inputs):
-        exp_values = np.exp(inputs - np.max(inputs, axis=1, keepdims=True)) 
-        probabilities = exp_values / np.sum(exp_values, axis=1, keepdims=True)
-        self.output = probabilities
+# target_class = 0 # We want the output for the class to be 0 (instead of 1)
 
-X, y = spiral_data(samples=100, classes=3)
+loss = -(math.log(softmax_output[0]) * target_output[0] + # Calculate the loss by using natural logs times output value (2 are 0) 
+         math.log(softmax_output[1]) * target_output[1] + 
+         math.log(softmax_output[2]) * target_output[2])
 
-dense1 = Layer_Dense(2, 3)
-activation1 = Activation_ReLU()
+print(loss)
 
-dense2 = Layer_Dense(3, 3)
-activation2 = Activation_Softmax()
+# We could simplify the loss function to look like this:
 
-dense1.forward(X)
-activation1.forward(dense1.output)
+loss = -(math.log(softmax_output[0]))
 
-dense2.forward(activation1.output)
-activation2.forward(dense2.output)
+print(loss)
 
-print(activation2.output[:5])
+# Replacing the 'softmax_output' part of the calculation to demonstrate how loss goes up
+
+loss = -(math.log(0.7)) # Here's a 0.7 confidence level
+print(loss)  # 0.35667494393873245 loss value
+
+loss = -(math.log(0.5)) # Here's a 0.5 confidence level
+print(loss) # 0.6931471805599453 much bigger loss value
