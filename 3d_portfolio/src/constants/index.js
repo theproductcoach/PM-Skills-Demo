@@ -23,6 +23,7 @@ import {
     jobit,
     tripguide,
     threejs,
+    openai,
   } from "../assets";
   
   export const navLinks = [
@@ -42,15 +43,15 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Product Leader",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Product Coach",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Product Mentor",
       icon: backend,
     },
     {
@@ -111,6 +112,10 @@ import {
     {
       name: "docker",
       icon: docker,
+    },
+    {
+      name: "openai",
+      icon: openai,
     },
   ];
   
