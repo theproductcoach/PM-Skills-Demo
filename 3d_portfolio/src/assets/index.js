@@ -26,6 +26,12 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import tanda from "./company/tanda.png";
+import vision6 from "./company/vision6.png";
+import productcoach from "./company/productcoach.png"
+import citrusad from "./company/citrusad.jpg"
+import ladbrokes from "./company/ladbrokes.jpg"
+
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -58,6 +64,11 @@ export {
   shopify,
   starbucks,
   tesla,
+  tanda,
+  vision6,
+  productcoach,
+  citrusad,
+  ladbrokes,
   carrent,
   jobit,
   tripguide
