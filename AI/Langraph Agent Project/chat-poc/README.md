@@ -1,7 +1,3 @@
-Here’s a concise yet informative **README.md** you could include in your repo to summarize the project so far:
-
----
-
 # Langraph Agent Project
 
 A proof-of-concept application that demonstrates:
