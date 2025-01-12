@@ -1,9 +1,9 @@
-const weaviate = require('weaviate-ts-client');
+import weaviate from 'weaviate-ts-client';
 
 async function importData() {
   const client = weaviate.client({
     scheme: 'http',
-    host: 'localhost:8080',
+    host: 'localhost:8001',
   });
 
   // Example docs
@@ -29,7 +29,7 @@ async function importData() {
         .withClassName('Document')
         .withProperties(doc)
         .do();
-      console.log('Imported:', result);
+      console.log('Imported sample docs:' , result);
     } catch (err) {
       console.error('Error importing doc:', err);
     }

@@ -11,7 +11,7 @@ app.use(cors());
 // Initialize the Weaviate client
 const weaviateClient = weaviate.client({
   scheme: 'http',
-  host: 'localhost:8080', // or your cloud endpoint
+  host: 'localhost:8001', // or your cloud endpoint
 });
 
 // Basic test route
