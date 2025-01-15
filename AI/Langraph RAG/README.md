@@ -41,6 +41,20 @@ pip install -r requirements.txt
 
 ---
 
+## Setting Up Environment Variables
+
+This project uses a `.env` file to store sensitive information such as API keys. To set it up:
+
+1. Create a `.env` file in the root directory of the project.
+2. Copy the contents of `.env.example` into `.env`.
+3. Replace `your-api-key-here` with your actual API key.
+
+Example `.env` file: LANGSMITH_TRACING=true LANGSMITH_API_KEY=your-actual-api-key
+
+Ensure the `.env` file is not included in version control by keeping `.env` in the `.gitignore` file.
+
+
+
 ## Usage
 
 Run the Application:
