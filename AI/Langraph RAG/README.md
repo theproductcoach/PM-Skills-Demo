@@ -76,13 +76,6 @@ View the streamed output of each step (retrieval and generation), followed by th
 ----------------
 ```
 
-### Stream Tokens
-To stream generated tokens:
-```python
-for message, metadata in graph.stream({"question": question}, stream_mode="messages"):
-    print(message.content, end="|")
-```
-
 ---
 
 ## Customising the Prompt
