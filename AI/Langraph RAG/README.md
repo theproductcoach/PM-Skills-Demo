@@ -41,20 +41,6 @@ pip install -r requirements.txt
 
 ---
 
-## Setting Up Environment Variables
-
-This project uses a `.env` file to store sensitive information such as API keys. To set it up:
-
-1. Create a `.env` file in the root directory of the project.
-2. Copy the contents of `.env.example` into `.env`.
-3. Replace `your-api-key-here` with your actual API key.
-
-Example `.env` file: LANGSMITH_TRACING=true LANGSMITH_API_KEY=your-actual-api-key
-
-Ensure the `.env` file is not included in version control by keeping `.env` in the `.gitignore` file.
-
-
-
 ## Usage
 
 Run the Application:
@@ -74,6 +60,13 @@ View the streamed output of each step (retrieval and generation), followed by th
 ----------------
 {'generate': {'answer': 'Task decomposition is ...'}}
 ----------------
+```
+
+### Stream Tokens
+To stream generated tokens:
+```python
+for message, metadata in graph.stream({"question": question}, stream_mode="messages"):
+    print(message.content, end="|")
 ```
 
 ---
@@ -114,6 +107,35 @@ This ensures the model uses the custom prompt for generating answers.
 
 ---
 
+## Clearing the Vector Store
+
+If the vector store becomes populated with duplicate or unnecessary documents, you can clear it using a dedicated script. This ensures the store remains clean and avoids indexing the same documents multiple times.
+
+### Using the Clearing Script
+Create a script like `clear_vector_store.py` with the following content:
+```python
+from setup_components import vector_store
+
+# Clear the vector store
+if hasattr(vector_store, "documents"):
+    vector_store.documents = []  # Clear the document list
+    print("Vector store cleared.")
+else:
+    print("No documents to clear.")
+```
+
+Run the script whenever needed:
+```bash
+python clear_vector_store.py
+```
+
+### Future Improvements
+In the future, the application will:
+- Check if documents are already indexed before adding them to avoid duplicates.
+- Support storing vector data in longer-term storage (e.g., FAISS or a database) for better persistence and scalability.
+
+---
+
 ## File Structure
 
 ```
@@ -121,6 +143,7 @@ Langraph-RAG/
 ├── setup_components.py  # Sets up the vector store and local LLM
 ├── rag_with_langgraph.py # Main application logic
 ├── requirements.txt      # Dependencies
+├── clear_vector_store.py # Script to clear the vector store
 └── README.md             # Documentation
 ```
 
