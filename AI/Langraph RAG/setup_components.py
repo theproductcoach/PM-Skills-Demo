@@ -8,7 +8,7 @@ from langchain_core.vectorstores import InMemoryVectorStore
 os.environ["OPENAI_API_KEY"] = "lm-studio"  # Required by LangChain, even if LM Studio doesn't enforce it
 os.environ["OPENAI_API_BASE"] = "http://localhost:8000/v1"  # URL for LM Studio's OpenAI-style API
 
-llm = ChatOpenAI(model="TheBloke/Mistral-7B-Instruct-v0.2-GGUF")  # Replace with the model name from your LM Studio setup
+llm = ChatOpenAI(model="MaziyarPanahi/Llama-3-Groq-8B-Tool-Use-GGUF")  # Replace with the model name from your LM Studio setup
 
 # Set up the Hugging Face embeddings model
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
