@@ -29,6 +29,7 @@ A proof-of-concept application that demonstrates:
 
 - [Node.js](https://nodejs.org/) (LTS recommended)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) (if running Weaviate locally)
+- [LM Studio](https://lmstudio.ai/) (Meta-Llama-3.1-8B-Instruct-GGUF)
 
 ### 1. Spin Up Weaviate with Docker
 
