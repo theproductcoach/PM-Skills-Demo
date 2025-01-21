@@ -16,7 +16,54 @@ This application uses LangGraph to implement a **retrieval-augmented generation 
 
 ---
 
-## Setup Instructions
+### Setting up LM Studio and Using Meta-Llama-3.1-8B-Instruct-GGUF
+
+To integrate the **Meta-Llama-3.1-8B-Instruct-GGUF** model with this application, follow these steps to configure LM Studio.
+
+---
+
+#### Prerequisites
+
+Ensure you have the following installed:
+
+- **Python 3.8+**
+- **LM Studio**
+- Adequate system resources (minimum 16GB RAM for the 8B model).
+
+---
+
+#### Steps to Set Up LM Studio
+
+1. **Download LM Studio**  
+   Visit the [official LM Studio GitHub repository](https://github.com/example-repo) and download the latest version for your operating system.
+
+2. **Install LM Studio**  
+   Follow the installation instructions specific to your operating system:
+   - macOS/Linux: Use the `.dmg` or `.deb` file.
+   - Windows: Use the `.exe` installer.
+
+3. **Download the Model**  
+   Use the LM Studio interface to download the **Meta-Llama-3.1-8B-Instruct-GGUF** model. Alternatively, you can import a local GGUF model file if available.
+
+4. **Enable the API in LM Studio**  
+   - Open LM Studio.
+   - Navigate to **Settings > API**.
+   - Enable the **API Server**.
+   - Note the API URL and port (default: `http://localhost:8080`).
+
+5. **Verify the Setup**  
+   Confirm that LM Studio is running and the model is loaded. Use the following command in your terminal:
+
+   ```bash
+   lmstudio --list-models
+   ```
+
+6. **Update the setup_components.py file**
+    Make sure the setup_components.py file is updated with the correct API key and URL to ensure smooth communication between your application and LM Studio
+
+---
+
+## Code Setup Instructions
 
 Clone the Repository:
 
