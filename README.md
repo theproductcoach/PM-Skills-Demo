@@ -1,14 +1,14 @@
 # Project Showcase: Demonstrating PM Skills in A/B Testing, ML, AI, and API Design
 
-Welcome to my GitHub repository, where I showcase my project portfolio highlighting my proficiency in various aspects of project management. In this collection, you'll find examples that showcase my skills in A/B testing, Machine Learning (ML) implementation, Artificial Intelligence (AI) integration, and the design of basic APIs.
+Welcome to my GitHub repository, where I showcase my project portfolio highlighting my proficiency in various aspects of product management. In this collection, you'll find examples that showcase my skills in A/B testing, Machine Learning (ML) implementation, Artificial Intelligence (AI) integration, and the design of basic APIs.
 
 ## A/B Testing
 
-Explore projects where I've successfully executed A/B testing strategies to optimize user experiences, increase engagement, and drive conversions. Learn about the methodologies, hypotheses, and results that demonstrate my ability to make data-driven decisions.
+Explore projects where I've successfully executed A/B testing strategies to optimise user experiences, increase engagement, and drive conversions. Learn about the methodologies, hypotheses, and results that demonstrate my ability to make data-driven decisions.
 
 ## Machine Learning Implementations (Supervised and Unsupervised)
 
-Discover how I've leveraged machine-learning techniques to solve real-world problems. Dive into projects that demonstrate my understanding of ML algorithms, data preprocessing, model training, and evaluation metrics, all aimed at delivering tangible business value.
+Discover how I've leveraged machine-learning techniques to solve real-world problems. Dive into projects demonstrating my understanding of ML algorithms, data preprocessing, model training, and evaluation metrics, all aimed at delivering tangible business value.
 
 ## AI Implementation Examples
 
@@ -16,7 +16,7 @@ Explore my AI implementation projects, where I've integrated cutting-edge AI tec
 
 ## Designing a Basic API
 
-Learn about my experience in designing and building APIs that facilitate data exchange and enable seamless interactions between applications. Explore projects where I've created RESTful APIs, documented endpoints, and ensured scalability and reliability.
+Learn about my experience designing and building APIs that facilitate data exchange and enable seamless application interactions. Explore projects where I've created RESTful APIs, documented endpoints, and ensured scalability and reliability.
 
 Feel free to delve into each area to gain insights into my approach, problem-solving skills, and commitment to delivering high-quality solutions.
 
